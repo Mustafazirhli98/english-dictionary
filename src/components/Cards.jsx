@@ -9,10 +9,10 @@ export const Cards = () => {
 
   return (
 
-    <>
+    <div className='searchResult'>
       {
         !(isSearched) &&
-        <div className='col-sm-8 offset-1'>
+        <div className='col-sm-10 offset-1'>
           <h5 className='beforeSearch'>
             Search a word from dictionary.
           </h5>
@@ -29,14 +29,14 @@ export const Cards = () => {
             </div>
             <div className='col-sm-9 card-right-side'>
               <div className='word-detail'>
-                <h6 className="card-subtitle mb-2 text-body-secondary">{cardObject.generalUse}</h6>
+                <h6 className="card-subtitle mb-2 text-body-secondary">General use: {cardObject.generalUse}</h6>
                 <p className="card-text">{cardObject.definition}</p>
               </div>
             </div>
           </div>
         </div>
       }
-    </>
+    </div>
 
   )
 }

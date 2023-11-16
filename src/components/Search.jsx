@@ -24,7 +24,7 @@ export const Search = () => {
 
   return (
 
-    <div>
+    <div className='search'>
       <div className="input-group">
         <input type="text" className="form-control" placeholder="Type a word" onChange={(e) => {
           setTypedWord(e.target.value)

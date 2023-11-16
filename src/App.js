@@ -17,7 +17,7 @@ function App() {
   return (
 
     <mainContext.Provider value={stateData}>
-      <div className="container ">
+      <div className="container-fluid">
         <div className='row'>
           <div className='col-sm-12 searchSection'>
             <Search />

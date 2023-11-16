@@ -1,16 +1,23 @@
-.container {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+.container-fluid {
+    height: 100%;
+    width: 100%;
+    background-color: #dee1e6;
 }
 
 .searchSection {
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .cardSection {
     margin-bottom: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .card-left-side {
@@ -40,7 +47,8 @@ input.form-control:focus {
 }
 
 input.form-control {
-    max-width: 1000px;
+    min-width: 500px;
+    max-width: 900px;
 }
 
 .input-group {
@@ -48,7 +56,8 @@ input.form-control {
     justify-content: center;
 }
 
-.card{
+.card {
+    min-width: 600px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
