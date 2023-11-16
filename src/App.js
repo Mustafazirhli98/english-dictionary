@@ -19,14 +19,9 @@ function App() {
 
     <mainContext.Provider value={stateData}>
       <div className="container">
-        <div className='row'>
-          <div className='col-sm-12 searchSection'>
-            <Search />
-          </div>
-          <div className='col-sm-12 cardSection'>
-            <Cards />
-          </div>
-        </div>
+        <h1 className='appTitle'>Dictionary App</h1>
+        <Search />
+        <Cards />
       </div>
     </mainContext.Provider>
   );
@@ -38,3 +33,4 @@ export default App;
 //kelime yoksa pop-up çıkacak
 //ses yoksa pop-up çıkacak
 //inputun uzunluğu sabit tutulacak
+//sayfa başına başlık eklenecek

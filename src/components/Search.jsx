@@ -24,20 +24,22 @@ export const Search = () => {
 
   return (
 
-    <div className='search'>
-      <div className="input-group">
-        <input type="text" className="form-control" placeholder="Type a word" onChange={(e) => {
-          setTypedWord(e.target.value)
-        }} />
-        <button
-          className="btn btnSearch"
-          id="searchButton"
-          type="button"
-          onClick={() => {
-            displayWord();
-          }}>
-          Search
-        </button>
+    <div className='row'>
+      <div className='col-sm-12 searchSection'>
+        <div className="input-group">
+          <input type="text" className="form-control" placeholder="Type a word" onChange={(e) => {
+            setTypedWord(e.target.value)
+          }} />
+          <button
+            className="btn btnSearch"
+            id="searchButton"
+            type="button"
+            onClick={() => {
+              displayWord();
+            }}>
+            Search
+          </button>
+        </div>
       </div>
     </div>
 
