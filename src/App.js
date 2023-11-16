@@ -10,6 +10,7 @@ function App() {
   const [typedWord, setTypedWord] = useState("");
   const [isSearched, setIsSearched] = useState(false);
 
+
   let stateData = [
     isPlaying, setIsplaying, cardObject, setCardObject, typedWord, setTypedWord, isSearched, setIsSearched
   ]
@@ -17,7 +18,7 @@ function App() {
   return (
 
     <mainContext.Provider value={stateData}>
-      <div className="container-fluid">
+      <div className="container">
         <div className='row'>
           <div className='col-sm-12 searchSection'>
             <Search />
@@ -33,12 +34,7 @@ function App() {
 
 export default App;
 
-//Api'yi bul. Eğer tüm kelimelere erişemiyorsan anasayfada input ve bir bölüm daha olacak. İnputta aratılan kelime inputun altına gelecek.
-//card yapısını, inputu ve sayfa tasarımını oluştur
-//önyüzde word/origin/audio
-//arka yüzde partOfSpeech/definition/example
-//cardların üzerinde hoparlör butonu olacak ve kelime yazacak. Ayrıca butona basınca telafuz gelecek.
-//inputtan aranan kelimeye göre card çıkacak.
-//cardlarda kelimelerin ingilizce açıklamaları da yazacak.
-//oop yapısı kurulacak.
-//data çekme işlemi senkron olarak yapılacak. Önce kelime, sonra açıklama, sonra ses.
+//input boşsa pop-up çıkacak
+//kelime yoksa pop-up çıkacak
+//ses yoksa pop-up çıkacak
+//inputun uzunluğu sabit tutulacak

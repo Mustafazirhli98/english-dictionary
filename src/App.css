@@ -1,23 +1,25 @@
-.container-fluid {
-    height: 100%;
-    width: 100%;
-    background-color: #dee1e6;
-}
-
-.searchSection {
-    margin-bottom: 50px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
-.cardSection {
-    margin-bottom: 120px;
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c46352;
+}
+
+.searchSection {
+    margin-bottom: 50px;
+
+}
+
+
+.cardSection {
+    margin-bottom: 120px;
+
 }
 
 .card-left-side {
@@ -65,4 +67,9 @@ input.form-control {
 
 .beforeSearch {
     color: rgba(0, 0, 0, 0.7);
+}
+
+.btnSearch {
+    background-color: #714433 !important;
+    color: aliceblue !important;
 }

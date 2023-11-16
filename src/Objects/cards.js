@@ -11,7 +11,7 @@ export default class CardObject {
             setIsplaying(true)
             audioElement.src = this.audio
             audioElement.play()
-                .catch(() => alert("ses ögesi bulunamadı."))
+                .catch(() => this.showPopUp = true)
         }
         setIsplaying(false)
     }

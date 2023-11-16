@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { mainContext } from '../context'
 import CardObject from '../Objects/cards';
 export const Search = () => {
@@ -30,10 +30,12 @@ export const Search = () => {
           setTypedWord(e.target.value)
         }} />
         <button
-          className="btn btn-outline-secondary"
+          className="btn btnSearch"
           id="searchButton"
           type="button"
-          onClick={() => displayWord()}>
+          onClick={() => {
+            displayWord();
+          }}>
           Search
         </button>
       </div>
