@@ -1,10 +1,9 @@
 export default class CardObject {
-    constructor(word, audio, generalUse, definition, typedWord) {
+    constructor(word, audio, generalUse, definition) {
         this.word = word;
         this.audio = audio;
         this.generalUse = generalUse;
         this.definition = definition;
-        this.typedWord = typedWord;
     }
     playAudio = (isPlaying, setIsplaying) => {
         let audioElement = document.querySelector("audio");
