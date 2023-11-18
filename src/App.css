@@ -7,8 +7,33 @@
      padding: 10px;
  }
 
+ .appTitle {
+     text-align: center;
+     padding: 30px;
+     color: #fff;
+ }
+
  input {
      border: 1px solid black
+ }
+
+ input.form-control:focus {
+     box-shadow: none;
+     border-color: black;
+ }
+
+ .input-group {
+     display: flex;
+     justify-content: center;
+ }
+
+ .card {
+     min-width: 600px;
+     max-width: 800px;
+     margin: 20px auto 0 auto;
+     background-color: #cfd4d9 !important;
+     color: #fff;
+     border: 1px solid black;
  }
 
  .card-left-side {
@@ -32,43 +57,8 @@
      padding: 12px;
  }
 
- input.form-control:focus {
-     box-shadow: none;
-     border-color: black;
- }
-
-
- .input-group {
-     display: flex;
-     justify-content: center;
- }
-
- .card {
-     min-width: 600px;
-     max-width: 800px;
-     margin: 20px auto 0 auto;
-     background-color: #b0b3b8 !important;
-     border: 1px solid black;
- }
-
-
  .beforeSearch {
      color: rgba(0, 0, 0, 0.7);
- }
-
- .btnSearch {
-     background-color: #6b7274 !important;
-     color: #ffffff !important;
- }
-
- .btnSearch:hover {
-     background-color: rgba(176, 185, 188, 0.275) !important;
- }
-
- .appTitle {
-     text-align: center;
-     padding: 30px;
-     color: #fff;
  }
 
  .toast {
@@ -85,5 +75,14 @@
  }
 
  .closeToast {
-    cursor: pointer;
+     cursor: pointer;
+ }
+
+ .btnSearch {
+     background-color: #6b7274 !important;
+     color: #ffffff !important;
+ }
+
+ .btnSearch:hover {
+     background-color: rgba(176, 185, 188, 0.275) !important;
  }

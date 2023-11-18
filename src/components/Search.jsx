@@ -7,7 +7,7 @@ export const Search = () => {
 
   const [isPlaying, setIsplaying, cardObject, setCardObject, typedWord, setTypedWord, isSearched, setIsSearched, isError, setIsError, toastNote, setToastNote] = useContext(mainContext);
 
-  // #region errors
+  // #region notFoundError
   const showNotFoundError = () => {
     setToastNote("Word can't be found.")
     setIsError(true)
@@ -16,6 +16,7 @@ export const Search = () => {
     }, 2000)
   }
   //#endregion
+
   const displayWord = () => {
     fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + typedWord)
       .then(response => response.json())
@@ -31,9 +32,7 @@ export const Search = () => {
       }).catch(() => showNotFoundError())
   }
 
-
   return (
-
     <div className='row mb-5'>
       <Toast className='toast' show={isError}>
         <Toast.Body className='toastBody'>{toastNote}<IoMdClose className='closeToast' onClick={() => setIsError(false)} /></Toast.Body>

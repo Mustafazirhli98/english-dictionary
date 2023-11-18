@@ -8,7 +8,7 @@ export const Cards = () => {
   const [isPlaying, setIsplaying, cardObject, setCardObject, typedWord, setTypedWord, isSearched, setIsSearched, isError, setIsError, toastNote, setToastNote] = useContext(mainContext);
 
   return (
-
+    
     <div className='row'>
       <div className='col-sm-12'>
         {

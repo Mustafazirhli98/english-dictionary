@@ -27,20 +27,4 @@ export default class CardObject {
             }, 2000);
         }
     }
-
-    // showEmptyError = (setIsError, setToastNote) => {
-    //     setToastNote("Audio is not found.");
-    //     setIsError(true);
-    //     setTimeout(() => {
-    //         setIsError(false);
-    //     }, 2000);
-    // }
-
-    showNotFoundError = (setIsError, setToastNote) => {
-        setToastNote("Word can't be found.")
-        setIsError(true)
-        setTimeout(() => {
-            setIsError(false)
-        }, 2000)
-    }
 }
