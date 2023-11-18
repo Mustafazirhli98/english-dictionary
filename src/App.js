@@ -21,7 +21,7 @@ function App() {
 
     <mainContext.Provider value={stateData}>
       <div className="container">
-        <h1 className='appTitle'>Dictionary App</h1>
+        <h1 className='appTitle'>English Dictionary</h1>
         <Search />
         <Cards />
       </div>
