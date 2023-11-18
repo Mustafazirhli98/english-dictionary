@@ -1,10 +1,31 @@
 export default class CardObject {
-    constructor(word, audio, generalUse, definition) {
+    constructor(word, audio, allTypes, definitions) {
         this.word = word;
         this.audio = audio;
-        this.generalUse = generalUse;
-        this.definition = definition;
+        this.allTypes = allTypes;
+        this.definitions = definitions;
+        this.definition = [];
+        this.types = [];
     }
+
+    handleDefinition = () => {
+        this.definitions.map((item) => {
+            if (item.example) {
+                this.definition.push(
+                    {
+                        definition: item.definition,
+                        example: item.example
+                    })
+            }
+        })
+    }
+
+    handleTypes = () => {
+        this.allTypes.map((item) => {
+            this.types.push(item.partOfSpeech)
+        })
+    }
+
     playAudio = (isPlaying, setIsplaying) => {
         let audioElement = document.querySelector("audio");
         if (!isPlaying) {

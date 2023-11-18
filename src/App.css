@@ -10,8 +10,9 @@
  .appTitle {
      text-align: center;
      padding: 30px;
-     color: #fff;
+     color: #333333;
  }
+
 
  input {
      border: 1px solid black
@@ -30,22 +31,33 @@
  .card {
      min-width: 600px;
      max-width: 800px;
-     margin: 20px auto 0 auto;
-     background-color: #cfd4d9 !important;
+     margin: 0 auto 30px auto;
+     background-color: #e7e7e7 !important;
      color: #fff;
      border: 1px solid black;
  }
 
- .card-left-side {
-     border-right: 1px solid rgba(128, 128, 128, 0.66);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-
+ .card-top {
+     text-align: center;
+     background-color: #4f4e4e;
+     color: #fff;
+     padding: 10px;
+     border-radius: 10px;
  }
 
- .card-left-side .speaker {
+ .definition {
+     font-weight: 600;
+ }
+
+ .example {
+     list-style: none;
+ }
+
+ .borderOfDefinition {
+     margin-bottom: 40px;
+ }
+
+ .card-top .speaker {
      cursor: pointer;
  }
 
@@ -79,10 +91,11 @@
  }
 
  .btnSearch {
-     background-color: #6b7274 !important;
+     background-color: #4f4e4e !important;
      color: #ffffff !important;
  }
 
  .btnSearch:hover {
      background-color: rgba(176, 185, 188, 0.275) !important;
+     border: 1px solid #4b4a4a5f !important;
  }

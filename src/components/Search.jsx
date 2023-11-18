@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { mainContext } from '../context'
 import CardObject from '../Objects/cards';
 import { Toast } from 'react-bootstrap';
@@ -16,21 +16,34 @@ export const Search = () => {
     }, 2000)
   }
   //#endregion
+  let deneme;
+  const displayWord = async () => {
+    try {
+      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${typedWord}`);
+      const data = await response.json();
 
-  const displayWord = () => {
-    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + typedWord)
-      .then(response => response.json())
-      .then(data => {
-        if (data.length > 0) {
-          const newCardObject = new CardObject(data[0].word, data[0].phonetics[0].audio, data[0].meanings[0].partOfSpeech, data[0].meanings[0].definitions[0].definition);
-          setCardObject(newCardObject);
-          setIsSearched(true);
-        }
-        else showNotFoundError()
-        document.querySelector(".form-control").value = "";
-        setTypedWord("");
-      }).catch(() => showNotFoundError())
-  }
+      if (data.length > 0) {
+        // Yeni CardObject'u oluştur
+        const newCardObject = new CardObject(data[0].word, data[0].phonetics[0].audio, data[0].meanings, data[0].meanings[0].definitions);
+
+        // Önceki CardObject'u temizle ve yeni CardObject'u set et
+        setCardObject(() => newCardObject);
+        setIsSearched(true);
+
+        // Yeni CardObject üzerinden fonksiyonları çağır
+        newCardObject.handleDefinition();
+        newCardObject.handleTypes();
+      } else {
+        showNotFoundError();
+      }
+
+      document.querySelector(".form-control").value = "";
+      setTypedWord("");
+    } catch (error) {
+      showNotFoundError();
+    }
+  };
+
 
   return (
     <div className='row mb-5'>
