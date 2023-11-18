@@ -4,27 +4,20 @@
      transform: translateY(-50%);
      height: 70%;
      width: 100%;
-     background-color: #50717b;
      padding: 10px;
  }
-
 
  input {
      border: 1px solid black
  }
 
- .card {
-     border: 1px solid black;
-    margin: 50px;
- }
-
  .card-left-side {
-     width: 100%;
      border-right: 1px solid rgba(128, 128, 128, 0.66);
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
+
  }
 
  .card-left-side .speaker {
@@ -44,10 +37,6 @@
      border-color: black;
  }
 
- input.form-control {
-     min-width: 500px;
-     max-width: 900px;
- }
 
  .input-group {
      display: flex;
@@ -57,22 +46,44 @@
  .card {
      min-width: 600px;
      max-width: 800px;
-     margin-left: auto;
-     margin-right: auto;
-     background-color: #8ecccc !important;
+     margin: 20px auto 0 auto;
+     background-color: #b0b3b8 !important;
+     border: 1px solid black;
  }
+
 
  .beforeSearch {
      color: rgba(0, 0, 0, 0.7);
  }
 
  .btnSearch {
-     background-color: #8ecccc !important;
-     color: #212121 !important;
+     background-color: #6b7274 !important;
+     color: #ffffff !important;
+ }
+
+ .btnSearch:hover {
+     background-color: rgba(176, 185, 188, 0.275) !important;
  }
 
  .appTitle {
      text-align: center;
      padding: 30px;
-     color: #212121;
+     color: #fff;
+ }
+
+ .toast {
+     position: absolute;
+     top: -20%;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+
+ .toastBody {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .closeToast {
+    cursor: pointer;
  }

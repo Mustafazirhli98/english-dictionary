@@ -5,12 +5,12 @@ import { HiOutlineSpeakerWave } from "react-icons/hi2";
 
 
 export const Cards = () => {
-  const [isPlaying, setIsplaying, cardObject, setCardObject, typedWord, setTypedWord, isSearched, setIsSearched] = useContext(mainContext);
+  const [isPlaying, setIsplaying, cardObject, setCardObject, typedWord, setTypedWord, isSearched, setIsSearched, isError, setIsError, toastNote, setToastNote] = useContext(mainContext);
 
   return (
 
     <div className='row'>
-      <div className='col-sm-12 cardSection'>
+      <div className='col-sm-12'>
         {
           !(isSearched) &&
           <div className='col-sm-10 offset-1'>
@@ -25,7 +25,10 @@ export const Cards = () => {
             <div className="row card-body">
               <div className='col-sm-3 card-left-side'>
                 <h5 className="card-title">{cardObject.word}</h5>
-                <HiOutlineSpeakerWave className='speaker' onClick={() => cardObject.playAudio(isPlaying, setIsplaying)} />
+                <HiOutlineSpeakerWave className='speaker' onClick={() => {
+                  cardObject.playAudio(isPlaying, setIsplaying)
+                  cardObject.showAudioError(setIsError, setToastNote)
+                }} />
                 <audio />
               </div>
               <div className='col-sm-9 card-right-side'>
@@ -38,6 +41,6 @@ export const Cards = () => {
           </div>
         }
       </div>
-    </div>
+    </div >
   )
 }
