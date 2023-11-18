@@ -16,7 +16,7 @@ export default class CardObject {
                         definition: item.definition,
                         example: item.example
                     })
-            }
+            } else this.definition.push({ definition: item.definition })
         })
     }
 
