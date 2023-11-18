@@ -39,20 +39,23 @@ export const Search = () => {
       </Toast>
 
       <div className='col-sm-12 searchSection'>
-        <div className="input-group">
-          <input type="text" className="form-control" placeholder="Type a word" onChange={(e) => {
-            setTypedWord(e.target.value)
-          }} />
-          <button
-            className="btn btnSearch"
-            id="searchButton"
-            type="button"
-            onClick={() => {
-              displayWord();
-            }}>
-            Search
-          </button>
-        </div>
+        <form>
+          <div className="input-group">
+            <input type="text" className="form-control" placeholder="Type a word" onChange={(e) => {
+              setTypedWord(e.target.value)
+            }} />
+            <button
+              className="btn btnSearch"
+              id="searchButton"
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                displayWord();
+              }}>
+              Search
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
