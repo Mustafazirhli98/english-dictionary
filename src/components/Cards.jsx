@@ -29,7 +29,7 @@ export const Cards = () => {
                   {cardObject.word}
                 </h5>
                 <div className='types'>
-                  {"(" + cardObject.types + ")"}
+                  {"(" + (cardObject.types).join(", ") + ")"}
                 </div>
                 <HiOutlineSpeakerWave
                   className='speaker'
