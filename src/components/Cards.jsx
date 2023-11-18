@@ -28,7 +28,7 @@ export const Cards = () => {
                 <h5 className="card-title">
                   {cardObject.word}
                 </h5>
-                <div>
+                <div className='types'>
                   {"(" + cardObject.types + ")"}
                 </div>
                 <HiOutlineSpeakerWave

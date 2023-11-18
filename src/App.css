@@ -36,6 +36,7 @@
      background-color: #e7e7e7 !important;
      color: #fff;
      border: 1px solid black;
+     z-index: 0;
  }
 
  .card-top {
@@ -44,6 +45,10 @@
      color: #fff;
      padding: 10px;
      border-radius: 10px;
+ }
+
+ .types {
+     font-size: 14px;
  }
 
  .definition {
@@ -76,9 +81,10 @@
 
  .toast {
      position: absolute;
-     top: -20%;
+     top: 44%;
      left: 50%;
-     transform: translateX(-50%);
+     transform: translate(-50%,-50%);
+     z-index: 1;
  }
 
  .toastBody {
